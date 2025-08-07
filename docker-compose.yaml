@@ -1,0 +1,10 @@
+services:
+  database:
+    container_name: better-auth-db
+    image: postgres
+    ports:
+      - 5432:5432 # Postgres port
+    environment: #postgres://user:password@host:port/database
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: better_auth_db
